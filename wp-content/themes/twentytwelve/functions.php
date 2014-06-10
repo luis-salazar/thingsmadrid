@@ -497,3 +497,22 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130301', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+
+/**
+ * Snippet Name: Load jquery migrate only in admin panel
+ * Snippet URL: http://www.wpcustoms.net/snippets/load-jquery-migrate-admin-panel/
+ */
+ // remove jquery migrate on frontend
+function wpc_dequeue_jquery_migrate( &$scripts){
+    $scripts->remove( 'jquery');
+    $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.11.0' );
+}
+add_filter( 'wp_default_scripts', 'wpc_dequeue_jquery_migrate' );
+
+
+// fix for broken admin stuff - we enqueue jquery migrate only in wp-admin
+function wpc_jquery_migrate_admin_enqueue() {
+        wp_enqueue_script('jquery-migrate');
+}
+add_action('admin_enqueue_scripts', 'wpc_jquery_migrate_admin_enqueue');
