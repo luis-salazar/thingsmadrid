@@ -529,3 +529,36 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+
+
+/**
+ * Snippet Name: Load jquery migrate only in admin panel
+ * Snippet URL: http://www.wpcustoms.net/snippets/load-jquery-migrate-admin-panel/
+ */
+ // remove jquery migrate on frontend
+function wpc_dequeue_jquery_migrate( &$scripts){
+    $scripts->remove( 'jquery');
+    $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.11.0' );
+}
+add_filter( 'wp_default_scripts', 'wpc_dequeue_jquery_migrate' );
+
+
+// fix for broken admin stuff - we enqueue jquery migrate only in wp-admin
+function wpc_jquery_migrate_admin_enqueue() {
+        wp_enqueue_script('jquery-migrate');
+}
+add_action('admin_enqueue_scripts', 'wpc_jquery_migrate_admin_enqueue');
+
+function google_analytics_tracking(){
+	?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51800748-1', 'thingsmadrid.com');
+  ga('send', 'pageview');
+</script>
+<?php } ?>
+<?php
+add_action('wp_footer','google_analytics_tracking');
