@@ -13,16 +13,18 @@
  *
  * @package WordPress
  */
+define('WP_HOME','local.thingsmadrid.com');
+define('WP_SITEURL','local.thingsmadrid.com');
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-define('DB_NAME', '148620wordpress20140515124947');
+define('DB_NAME', 'thingsmadrid');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'mythingsma');
+define('DB_USER', 'root');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', '3eb2KVea');
+define('DB_PASSWORD', 'root');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', 'localhost');
@@ -69,7 +71,7 @@ $table_prefix  = 'wp_';
  * Por ejemplo, instala ca_ES.mo copiándolo a wp-content/languages y define WPLANG como 'ca_ES'
  * para traducir WordPress al catalán.
  */
-define('WPLANG', 'es_ES');
+define('WPLANG', 'en');
 
 /**
  * Para desarrolladores: modo debug de WordPress.
