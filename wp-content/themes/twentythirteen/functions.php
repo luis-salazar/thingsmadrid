@@ -569,3 +569,13 @@ remove_action( 'wp_head', 'wlwmanifest_link' ) ;
 remove_action( 'wp_head', 'rsd_link' ) ;
 remove_action( 'wp_head', 'feed_links', 2 ); 
 remove_action( 'wp_head', 'feed_links_extra', 3 );
+add_filter( 'pre_comment_content', 'wp_specialchars' ); //Disallow html in comments
+
+//Stop Wordpress guessing url
+add_filter('redirect_canonical', 'stop_guessing');
+function stop_guessing($url) {
+ if (is_404()) {
+   return false;
+ }
+ return $url;
+}
