@@ -1,0 +1,36 @@
+User-agent: *
+
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/cache
+Disallow: /wp-content/themes
+Disallow: /trackback
+Disallow: /feed
+Disallow: /comments
+Disallow: */trackback
+Disallow: */feed
+Disallow: */comments
+Disallow: /cgi-bin/
+
+Allow: /wp-content/uploads/
+# Disallow: /tag/ # uncomment if you’re not using tags
+# Disallow: /category/ # uncomment if you’re not using categories
+# Disallow: /author/ # uncomment for single user blogs
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: /index.php # separate directive for the main script file of WP
+Disallow: /*? # search results
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+Disallow: */feed/
+Disallow: */trackback/
+# Disallow: */print/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
