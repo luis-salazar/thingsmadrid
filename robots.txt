@@ -15,8 +15,6 @@ Disallow: /cgi-bin/
 
 Allow: /wp-content/uploads/
 # Disallow: /tag/ # uncomment if you’re not using tags
-# Disallow: /category/ # uncomment if you’re not using categories
-# Disallow: /author/ # uncomment for single user blogs
 Disallow: /feed/
 Disallow: /trackback/
 Disallow: /index.php # separate directive for the main script file of WP
@@ -27,6 +25,9 @@ Disallow: /*.inc$
 Disallow: /*.css$
 Disallow: */feed/
 Disallow: */trackback/
+Disallow: /author/
+Disallow: /category/
+Disallow: /?p*
 # Disallow: */print/
 
 User-agent: Googlebot-Image
