@@ -739,10 +739,10 @@ img.alignnone {
 .entry-caption,
 .gallery-caption {
 	color: #220e10;
-	font-size: 18px;
+	font-size: 15px;
 	font-style: italic;
 	font-weight: 300;
-	margin: 0 0 24px;
+	margin: 5px 0 10px;
 }
 
 div.wp-caption.alignright img[class*="wp-image-"] {
@@ -1244,6 +1244,10 @@ footer.entry-meta {
 	border-radius: 0;
 }
 
+
+.page #content ol li {
+    margin: 12px 0;
+}
 
 /**
  * 5.4 Galleries
