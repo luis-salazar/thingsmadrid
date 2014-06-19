@@ -35,6 +35,9 @@ define('DB_CHARSET', 'utf8');
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
 
+//Limitar el numero de revisiones a 3
+define( 'WP_POST_REVISIONS', 3);
+
 /**#@+
  * Claves únicas de autentificación.
  *
