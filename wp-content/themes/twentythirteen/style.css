@@ -147,7 +147,7 @@ h6 {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 40px;
 	margin: 33px 0;
 }
 
@@ -819,9 +819,8 @@ img.wp-smiley,
 	color: #141412;
 	display: block;
 	margin: 0 auto;
-	max-width: 1080px;
-	min-height: 230px;
-	padding: 0 20px;
+	max-width: 1080px;	
+	padding: 0 20px 20px;
 	text-decoration: none;
 	width: 100%;
 }
@@ -831,11 +830,11 @@ img.wp-smiley,
 }
 
 .site-title {
-	font-size: 60px;
+	font-size: 45px;
 	font-weight: bold;
 	line-height: 1;
 	margin: 0;
-	padding: 58px 0 10px;
+	padding: 10px 0;
 }
 
 .site-description {
@@ -843,7 +842,65 @@ img.wp-smiley,
 	margin: 0;
 }
 
+#social-icons {
+    position: absolute;
+    right: 150px;
+    top: 40px;
+}
+#social-icons ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#social-icons ul li {
+    background: none repeat scroll 0 0 #808080;
+    border-radius: 13px;
+    float: left;
+    margin: 0 0 0 15px;
+}
 
+#social-icons ul li a {
+    background: none repeat scroll 0 0 #808080;
+    border-radius: 13px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 26px;
+    line-height: 27px;
+    min-width: 26px;
+    padding: 0;
+    text-align: center;
+    transition: background-color 0.1s ease-out 0s;
+}
+
+#social-icons ul li a:hover{
+	text-decoration: none;
+}
+#social-icons ul li.pinterest a:hover {
+    background-color: #C81C1E;
+}
+#social-icons ul li.dribbble a:hover {
+    background-color: #DE4A84;
+}
+#social-icons ul li.tumblr a:hover {
+    background-color: #35506B;
+}
+#social-icons ul li.twitter a:hover {
+    background-color: #00ACED;
+}
+#social-icons ul li.facebook a:hover {
+    background-color: #3B5998;
+}
+#social-icons ul li.linkedin a:hover {
+    background-color: #4875B4;
+}
+#social-icons ul li.google a:hover {
+    background-color: #C63D2D;
+}
+
+#slogan_wrapper {
+
+}
 /**
  * 4.2 Navigation
  * ----------------------------------------------------------------------------
@@ -945,10 +1002,10 @@ ul.nav-menu .focus > ul,
 
 /* Navbar */
 .navbar {
-	background-color: #f7f5e7;
+	background-color: #DDD;
 	margin: 0 auto;
 	max-width: 1600px;
-	width: 100%;
+	width: 100%;	
 }
 
 .site-header .search-form {
@@ -2812,6 +2869,13 @@ footer.entry-meta {
 	.gallery-caption {
 		display: none;
 	}
+
+	#social-icons {
+	    position: absolute;    
+	    top: 40px;
+	    right:50px;	 
+	}
+	
 }
 
 @media (max-width: 643px) {
@@ -2985,6 +3049,17 @@ footer.entry-meta {
 		padding-left: 0;
 		width: auto;
 	}
+
+	#social-icons {
+	    position: absolute;    
+	    top: 90px;
+	    margin-left: 5px;
+	    left: 0;
+	}
+
+	.navbar {
+		margin-top: 30px;
+	}
 }
 
 /* Mobile devices */
@@ -3048,6 +3123,16 @@ footer.entry-meta {
 	.comment-content,
 	.comment-list .reply {
 		width: 100%;
+	}
+	#social-icons {
+	    position: absolute;    
+	    top: 90px;
+	    margin-left: 5px;
+	    left: 0;
+	}
+
+	.navbar {
+		margin-top: 30px;
 	}
 }
 
