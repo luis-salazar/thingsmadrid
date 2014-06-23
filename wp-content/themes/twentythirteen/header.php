@@ -25,7 +25,7 @@
 				<ul>
 					<li class="pinterest"><a title="Look at pictures from Madrid" target="_blank" href="http://www.pinterest.com/thingsmadrid/"><i class="genericon-pinterest"></i></a></li>
 					<li class="twitter"><a title="Follow @thingsmadrid on Twitter" target="_blank" href="https://twitter.com/ThingsMadrid"><i class="genericon-twitter"></i></a></li>
-					<li class="facebook"><a title="Share on Facebook" target"_blank" href="https://www.facebook.com/thingsmadrid"><i class="genericon-facebook"></i></a></li>
+					<li class="facebook"><a title="Share on Facebook" target="_blank" href="https://www.facebook.com/thingsmadrid"><i class="genericon-facebook"></i></a></li>
 					<li class="google"><a title="Share on Google Plus" target="_blank" href="https://plus.google.com/107682883598168469224/posts"><i class="genericon-googleplus"></i></a></li>
 				</ul>
 			</div>
