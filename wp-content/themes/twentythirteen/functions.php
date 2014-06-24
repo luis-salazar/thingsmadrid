@@ -100,8 +100,8 @@ function twentythirteen_setup() {
 	 * This theme uses a custom image size for featured images, displayed on
 	 * "standard" posts and pages.
 	 */
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 604, 270, true );
+	//add_theme_support( 'post-thumbnails' );
+	//set_post_thumbnail_size( 604, 270, true );
 
 	// This theme uses its own gallery styles.
 	add_filter( 'use_default_gallery_style', '__return_false' );
@@ -395,7 +395,7 @@ function twentythirteen_the_attached_image() {
 	 *     @type int The attachment width in pixels.
 	 * }
 	 */
-	$attachment_size     = apply_filters( 'twentythirteen_attachment_size', array( 724, 724 ) );
+	$attachment_size     = apply_filters( 'twentythirteen_attachment_size' );
 	$next_attachment_url = wp_get_attachment_url();
 	$post                = get_post();
 
@@ -579,3 +579,23 @@ function stop_guessing($url) {
  }
  return $url;
 }
+
+function wpmayor_filter_image_sizes( $sizes) {
+
+unset( $sizes['thumbnail']);
+unset( $sizes['medium']);
+unset( $sizes['large']);
+unset( $sizes['wysija-newsletters-max']);
+
+return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'wpmayor_filter_image_sizes');
+
+function wpmayor_custom_image_sizes($sizes) {
+$myimgsizes = array(
+"image-in-post" => __( "Image in Post" ),
+"full" => __( "Original size" )
+);
+return $myimgsizes;
+}
+add_filter('image_size_names_choose', 'wpmayor_custom_image_sizes');
