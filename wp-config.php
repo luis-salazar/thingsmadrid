@@ -13,8 +13,11 @@
  *
  * @package WordPress
  */
-define('WP_HOME','local.thingsmadrid.com');
-define('WP_SITEURL','local.thingsmadrid.com');
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cach
+
+define('WP_HOME','http://local.thingsmadrid.com');
+define('WP_SITEURL','http://local.thingsmadrid.com');
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
